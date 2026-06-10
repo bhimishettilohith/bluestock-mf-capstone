@@ -8,4 +8,4 @@ This folder contains project reports, presentations, and generated visualization
 - Bluestock_MF_Presentation.pptx
 - charts/
 
-The charts folder contains visual outputs generated during EDA, performance analytics, advanced analytics, and portfolio optimization.
+The charts folder contains visual outputs generated during EDA, performance analytics, advanced analytics, and portfolio optimization.  
