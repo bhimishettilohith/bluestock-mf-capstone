@@ -1,3 +1,10 @@
+"""
+Bluestock Mutual Fund Analytics Capstone
+
+Script: scheduled_nav_update.py
+Purpose: Automates NAV update execution and maintains update logs.
+
+"""
 from datetime import datetime
 from pathlib import Path
 
@@ -8,7 +15,6 @@ print("=" * 50)
 
 print("NAV Data Updated Successfully")
 
-# Create logs folder if missing
 project_root = Path(__file__).resolve().parent.parent
 
 log_dir = project_root / "logs"

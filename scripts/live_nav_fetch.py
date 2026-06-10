@@ -1,3 +1,9 @@
+"""
+Bluestock Mutual Fund Analytics Capstone
+
+Script: live_nav_fetch.py
+Purpose: Fetches live NAV data from external APIs and updates mutual fund records.
+"""
 import pandas as pd
 import requests
 from pathlib import Path

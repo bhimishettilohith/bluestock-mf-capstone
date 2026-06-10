@@ -1,3 +1,9 @@
+"""
+Bluestock Mutual Fund Analytics Capstone
+
+Script: etl_pipeline.py
+Purpose: Executes the ETL workflow including data extraction, cleaning, transformation, and loading into processed datasets.
+"""
 import pandas as pd
 import sqlite3
 from pathlib import Path

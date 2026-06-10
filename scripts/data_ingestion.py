@@ -1,3 +1,10 @@
+"""
+Bluestock Mutual Fund Analytics Capstone
+
+Script: data_ingestion.py
+Purpose: Loads and validates raw mutual fund datasets.
+
+"""
 import pandas as pd
 from pathlib import Path
 

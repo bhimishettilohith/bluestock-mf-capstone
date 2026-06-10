@@ -1,3 +1,10 @@
+"""
+Bluestock Mutual Fund Analytics Capstone
+
+Script: recommender.py
+Purpose: Recommends mutual funds based on investor risk appetite.
+
+"""
 import pandas as pd
 
 performance = pd.read_csv(
