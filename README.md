@@ -2,52 +2,90 @@
 
 ## Overview
 
-The Bluestock Mutual Fund Analytics Capstone Project was developed as part of the Bluestock Fintech Data Analyst Internship Program. The objective of this project was to design and implement an end-to-end analytics platform for mutual fund data by integrating data engineering, financial analytics, risk assessment, visualization, and portfolio optimization techniques.
+The Bluestock Mutual Fund Analytics Capstone Project was developed as part of the Bluestock Fintech Data Analyst Internship Program. The objective of this project was to design and implement an end-to-end analytics platform for mutual fund data by integrating data engineering, financial analytics, risk assessment, visualization, automation, and portfolio optimization techniques.
 
-The project covers the complete analytics lifecycle, beginning with data ingestion and cleaning, followed by database design, exploratory data analysis, performance evaluation, dashboard development, advanced risk analytics, and portfolio optimization. In addition to the core requirements, bonus implementations such as automated NAV scheduling, Monte Carlo simulation, and Markowitz Efficient Frontier optimization were successfully completed.
+The project covers the complete analytics lifecycle, beginning with data ingestion and cleaning, followed by database design, exploratory data analysis, performance evaluation, dashboard development, advanced risk analytics, portfolio optimization, documentation, and automation. In addition to the core requirements, bonus implementations such as Automated NAV Scheduling, Monte Carlo Simulation, and Markowitz Efficient Frontier Optimization were successfully completed.
 
 ---
 
 # Project Objectives
 
-The primary objectives of this project were:
-
-* Build a robust ETL pipeline for mutual fund datasets.
-* Create a structured SQLite database for storing and querying financial data.
-* Perform exploratory data analysis to identify trends and patterns.
-* Calculate fund performance metrics such as CAGR, Sharpe Ratio, Sortino Ratio, Alpha, Beta, and Maximum Drawdown.
-* Develop an interactive Power BI dashboard for business users.
-* Implement advanced analytics including Value at Risk (VaR), Conditional VaR (CVaR), cohort analysis, and recommendation systems.
-* Explore portfolio optimization and forecasting techniques through bonus challenges.
-* Maintain a clean and well-documented codebase using Git and GitHub.
+- Build a robust ETL pipeline for mutual fund datasets.
+- Create a structured SQLite database for storing and querying financial data.
+- Perform exploratory data analysis to identify trends and patterns.
+- Calculate industry-standard performance metrics.
+- Develop an interactive Power BI dashboard.
+- Implement advanced analytics and risk assessment techniques.
+- Build a recommendation system based on investor risk appetite.
+- Automate NAV updates through scheduled execution.
+- Apply portfolio optimization and forecasting techniques.
+- Maintain a professional, documented, and reproducible codebase.
 
 ---
 
 # Technologies Used
 
-### Programming & Analytics
+## Programming & Analytics
+- Python
+- Pandas
+- NumPy
+- Matplotlib
+- Seaborn
+- Jupyter Notebook
 
-* Python
-* Pandas
-* NumPy
-* Matplotlib
-* Seaborn
+## Database
+- SQLite
+- SQL
 
-### Database
+## Visualization
+- Power BI
 
-* SQLite
-* SQL
+## Development & Version Control
+- VS Code
+- Git
+- GitHub
 
-### Visualization
+## Automation
+- Windows Task Scheduler
 
-* Power BI
+---
 
-### Development Tools
+# Project Architecture
 
-* VS Code
-* Jupyter Notebook
-* Git
-* GitHub
+```text
+Raw Mutual Fund Datasets
+          │
+          ▼
+Data Ingestion & Validation
+          │
+          ▼
+Data Cleaning & Transformation
+          │
+          ▼
+SQLite Database Storage
+          │
+          ▼
+Exploratory Data Analysis
+          │
+          ▼
+Performance Analytics
+(CAGR, Sharpe Ratio, Sortino Ratio,
+Alpha, Beta, Maximum Drawdown)
+          │
+          ▼
+Advanced Analytics
+(VaR, CVaR, Rolling Sharpe,
+Cohort Analysis, SIP Continuity,
+Recommendation Engine)
+          │
+          ▼
+Power BI Dashboard
+          │
+          ▼
+Portfolio Optimization & Forecasting
+(Monte Carlo Simulation,
+Efficient Frontier)
+```
 
 ---
 
@@ -55,288 +93,317 @@ The primary objectives of this project were:
 
 ```text
 bluestock_mf_capstone/
-├── automation/
-├── dashboard/
-│   └── bluestock_mf_dashboard.pbix
+├── README.md
+├── run_pipeline.py
+├── .gitignore
 ├── data/
-│   ├── raw/
-│   ├── processed/
-│   └── db/
-├── logs/
 ├── notebooks/
-│   ├── 01_data_ingestion.ipynb
-│   ├── 02_data_cleaning.ipynb
-│   ├── 03_eda_analysis.ipynb
-│   ├── 04_performance_analytics.ipynb
-│   ├── 05_advanced_analytics.ipynb
-│   ├── 06_monte_carlo_simulation.ipynb
-│   └── 07_efficient_frontier.ipynb
-├── reports/
 ├── scripts/
 ├── sql/
 ├── dashboard/
-└── README.md
+├── reports/
+├── logs/
+└── automation/
 ```
 
 ---
 
-# Day 1 – Data Ingestion & ETL Pipeline
+# Day-wise Work Completed
 
-The first phase focused on collecting and organizing mutual fund datasets. Raw datasets were imported using Pandas, validated, and stored in a structured project directory. A live NAV extraction script was also developed to fetch mutual fund NAV information from external APIs.
+## Day 1 – Data Ingestion & ETL Pipeline
+
+- Imported and validated mutual fund datasets.
+- Built data ingestion workflows.
+- Implemented ETL pipeline components.
+- Developed NAV fetching utilities.
+- Organized project directory structure.
 
 ### Deliverables
-
-* Data ingestion pipeline
-* AMFI validation script
-* Live NAV fetch utility
-* Raw dataset repository
+- Data ingestion pipeline
+- AMFI validation script
+- NAV fetch utility
 
 ---
 
-# Day 2 – Data Cleaning & Database Design
+## Day 2 – Data Cleaning & Database Design
 
-During this phase, extensive preprocessing was performed on the mutual fund datasets. Missing values, duplicates, inconsistent formats, and data quality issues were addressed. A relational SQLite database was designed and populated with cleaned datasets to support analytical queries.
+- Cleaned missing and inconsistent records.
+- Removed duplicates and standardized formats.
+- Designed SQLite database schema.
+- Loaded processed datasets into SQLite.
+- Executed SQL-based validation queries.
 
 ### Deliverables
-
-* Clean NAV dataset
-* Clean transaction dataset
-* SQLite database schema
-* SQL analytical queries
-* Database integration
+- Clean datasets
+- SQLite database
+- SQL schema
+- SQL queries
 
 ---
 
-# Day 3 – Exploratory Data Analysis
+## Day 3 – Exploratory Data Analysis
 
-The exploratory analysis phase focused on understanding mutual fund industry trends, investor behavior, category performance, and transaction patterns. Multiple visualizations were created to uncover meaningful business insights.
-
-### Key Analyses
-
-* NAV trend analysis
-* SIP inflow analysis
-* Investor demographic analysis
-* Geographic transaction distribution
-* Category-wise investment trends
-* Correlation analysis
-* Industry folio growth analysis
+- NAV trend analysis
+- SIP inflow analysis
+- Investor demographic analysis
+- Geographic investment analysis
+- Category-wise investment trends
+- Correlation analysis
+- Industry folio growth analysis
 
 ### Deliverables
-
-* EDA notebook
-* Business insight visualizations
-* Analytical summary report
+- EDA notebook
+- Visualizations
+- Business insights
 
 ---
 
-# Day 4 – Fund Performance Analytics
+## Day 4 – Fund Performance Analytics
 
-This phase focused on evaluating the performance of mutual funds using widely accepted financial metrics. Historical NAV data was transformed into return series and used to calculate risk-adjusted performance indicators.
+Historical NAV data was transformed into return series and used to calculate risk-adjusted performance metrics.
 
 ### Metrics Calculated
 
-* Daily Returns
-* CAGR
-* Sharpe Ratio
-* Sortino Ratio
-* Alpha
-* Beta
-* Maximum Drawdown
-
-A composite fund scorecard was developed to rank funds based on overall performance and risk-adjusted returns.
+- Daily Returns
+- CAGR
+- Sharpe Ratio
+- Sortino Ratio
+- Alpha
+- Beta
+- Maximum Drawdown
 
 ### Deliverables
 
-* Returns dataset
-* Alpha/Beta report
-* Sharpe Ratio report
-* Sortino Ratio report
-* Maximum Drawdown report
-* Fund Scorecard
+- Returns dataset
+- CAGR report
+- Sharpe Ratio report
+- Sortino Ratio report
+- Alpha/Beta report
+- Maximum Drawdown report
+- Fund Scorecard
 
 ---
 
-# Day 5 – Interactive Power BI Dashboard
+## Day 5 – Interactive Power BI Dashboard
 
-A four-page interactive Power BI dashboard was developed to provide decision-makers with a user-friendly interface for exploring mutual fund analytics.
+A four-page interactive dashboard was developed to provide business users with actionable insights.
 
 ### Dashboard Pages
 
-### Industry Overview
-
-Provides a high-level view of industry assets under management, SIP inflows, folio growth, and fund house performance.
-
-### Fund Performance
-
-Displays risk-return relationships, fund scorecards, benchmark comparisons, and performance rankings.
-
-### Investor Analytics
-
-Explores investor demographics, geographic investment patterns, transaction types, and investment behavior.
-
-### SIP & Market Trends
-
-Analyzes SIP growth trends, category inflows, market participation, and industry expansion metrics.
+1. Industry Overview
+2. Fund Performance
+3. Investor Analytics
+4. SIP & Market Trends
 
 ### Deliverables
 
-* Power BI dashboard (.pbix)
-* Interactive slicers and filters
-* Multi-page analytical reporting interface
+- Power BI Dashboard (.pbix)
+- Interactive slicers and filters
+- KPI reporting pages
 
 ---
 
-# Day 6 – Advanced Analytics & Risk Metrics
-
-Advanced analytical models were developed to assess risk, identify investor patterns, and support investment recommendations.
+## Day 6 – Advanced Analytics & Risk Metrics
 
 ### Implementations
 
-### Value at Risk (VaR) & Conditional VaR (CVaR)
-
-Historical VaR and CVaR calculations were performed to estimate potential downside risk under adverse market conditions.
-
-### Rolling Sharpe Ratio
-
-Rolling 90-day Sharpe Ratios were calculated to evaluate changing risk-adjusted performance over time.
-
-### Investor Cohort Analysis
-
-Investors were grouped based on their first investment year to study investment behavior across cohorts.
-
-### SIP Continuity Analysis
-
-Transaction frequency and investment consistency were analyzed to identify investors at risk of discontinuing SIP contributions.
-
-### Recommendation Engine
-
-A rule-based recommendation system was developed to suggest suitable mutual funds based on investor risk appetite.
-
-### Sector Concentration Analysis
-
-Herfindahl-Hirschman Index (HHI) calculations were performed to evaluate portfolio concentration risk.
+- Value at Risk (VaR)
+- Conditional Value at Risk (CVaR)
+- Rolling Sharpe Ratio
+- Investor Cohort Analysis
+- SIP Continuity Analysis
+- Recommendation Engine
+- Sector Concentration Analysis (HHI)
 
 ### Deliverables
 
-* VaR & CVaR report
-* Rolling Sharpe analysis
-* Cohort analysis report
-* SIP continuity report
-* Recommendation engine
-* Sector concentration report
+- VaR & CVaR report
+- Cohort analysis report
+- SIP continuity report
+- Recommendation engine
+- Sector concentration report
 
 ---
 
-# Automate NAV Scheduler
+## Day 7 – Documentation, Presentation & Deployment
 
-An automated NAV update system was implemented using Python and Windows Task Scheduler. The system periodically executes NAV update scripts and records execution logs for monitoring and auditing purposes.
+- Final report preparation
+- Presentation creation
+- Script documentation using docstrings
+- Folder-level README files
+- GitHub repository organization
+- Master pipeline runner implementation
+- Final repository validation
+
+### Deliverables
+
+- Final_Report.pdf
+- Bluestock_MF_Presentation.pptx
+- Root README.md
+- Folder-level README files
+- run_pipeline.py
+
+---
+
+# Advanced Analytics
+
+## Value at Risk (VaR) & CVaR
+
+Implemented historical risk measurement techniques to estimate potential downside losses under adverse market conditions.
+
+## Rolling Sharpe Ratio
+
+Calculated 90-day rolling Sharpe Ratios to monitor changing risk-adjusted performance over time.
+
+## Cohort Analysis
+
+Grouped investors by first transaction year to identify investment behavior patterns.
+
+## SIP Continuity Analysis
+
+Identified at-risk investors based on SIP transaction gaps.
+
+## Recommendation Engine
+
+Recommended mutual funds according to investor risk appetite and performance metrics.
+
+## Sector Concentration Analysis
+
+Calculated Herfindahl-Hirschman Index (HHI) to evaluate portfolio concentration risk.
+
+---
+
+# Bonus Challenges Completed
+
+## Automated NAV Scheduler
+
+Developed a Python-based automated NAV update process using Windows Task Scheduler. Execution logs are maintained for monitoring and validation.
+
+## Monte Carlo Simulation
+
+Forecasted future NAV growth over a five-year horizon using probabilistic simulations and historical return distributions.
+
+## Markowitz Efficient Frontier
+
+Implemented Modern Portfolio Theory to identify optimal portfolio allocations that maximize risk-adjusted returns.
+
+## Repository Documentation
+
+Added script docstrings, folder-level README files, centralized execution workflow, and improved project maintainability.
+
+---
+
+# Dashboard Overview
+
+The Power BI dashboard provides an interactive business intelligence solution for analyzing mutual fund performance and investor behavior.
 
 ### Features
 
-* Automated execution
-* Scheduled NAV updates
-* Execution logging
-* Error handling
+- Interactive slicers
+- Dynamic filtering
+- Risk-return analysis
+- Fund rankings
+- Investor segmentation
+- Market trend analysis
 
 ---
 
-#  Monte Carlo Simulation
+# Documentation & Automation
 
-A Monte Carlo simulation framework was developed to forecast future NAV values over a five-year period. Historical return distributions were used to generate multiple possible future scenarios and estimate the range of potential outcomes.
+To improve maintainability and reproducibility:
 
-### Benefits
-
-* Future NAV forecasting
-* Risk assessment
-* Scenario analysis
-* Investment uncertainty visualization
-
----
-
-#  Markowitz Efficient Frontier
-
-Modern Portfolio Theory was applied to construct an Efficient Frontier using selected mutual funds. Thousands of portfolios were simulated to identify optimal asset allocations that maximize returns while minimizing portfolio risk.
-
-### Outputs
-
-* Portfolio return analysis
-* Portfolio risk analysis
-* Sharpe Ratio optimization
-* Optimal portfolio allocation
+- Added docstrings to all Python scripts.
+- Created README files for major folders.
+- Implemented run_pipeline.py.
+- Maintained execution logs.
+- Organized repository using Git and GitHub.
 
 ---
 
 # Key Findings
 
-* Equity-oriented mutual funds generated higher long-term returns but exhibited greater volatility.
-* Several funds demonstrated strong risk-adjusted performance through high Sharpe and Sortino Ratios.
-* Investor participation increased significantly through SIP investments.
-* Portfolio concentration risk varied considerably across fund categories.
-* Certain investor cohorts displayed higher average investment amounts and retention rates.
-* Monte Carlo simulations indicated substantial long-term growth potential for selected funds.
-* Efficient Frontier optimization identified portfolio allocations capable of improving risk-return trade-offs.
+- Equity-oriented funds demonstrated strong long-term growth potential.
+- Risk-adjusted metrics provided deeper insights than returns alone.
+- SIP investments significantly contributed to overall fund inflows.
+- Investor activity was concentrated in major metropolitan regions.
+- Portfolio concentration varied across categories.
+- Monte Carlo simulations highlighted future growth opportunities and uncertainty.
+- Efficient Frontier optimization improved risk-return trade-offs.
 
 ---
 
 # Business Recommendations
 
-* Promote SIP-based investing to improve investor retention.
-* Encourage diversification to reduce concentration risk.
-* Use risk-adjusted metrics alongside returns when evaluating funds.
-* Leverage recommendation systems to personalize investor experiences.
-* Implement automated reporting and monitoring solutions for portfolio management.
+- Encourage SIP-based investing.
+- Promote diversification across sectors and categories.
+- Use risk-adjusted metrics for fund evaluation.
+- Personalize recommendations using investor profiles.
+- Automate reporting and monitoring workflows.
 
 ---
 
 # Future Enhancements
 
-Potential improvements include:
-
-* Real-time dashboard refresh using APIs.
-* Machine learning-based fund recommendation models.
-* Automated email reporting systems.
-* Streamlit-based web application deployment.
-* Advanced portfolio optimization techniques.
-* Integration with cloud-based data pipelines.
+- Real-time API integration.
+- Streamlit web application.
+- Automated email reporting.
+- Cloud deployment.
+- Machine learning recommendation models.
+- Advanced portfolio optimization techniques.
 
 ---
 
 # How to Run the Project
 
-### Clone Repository
+## Clone Repository
 
 ```bash
-git clone <repository_url>
+git clone <repository-url>
 cd bluestock_mf_capstone
 ```
 
-### Install Dependencies
+## Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### Run ETL Pipeline
+## Run Pipeline
 
 ```bash
-python scripts/etl_pipeline.py
+python run_pipeline.py
 ```
 
-### Run Recommendation Engine
+## Open Dashboard
 
-```bash
-python scripts/recommender.py
-```
-
-### Open Dashboard
-
-Open the Power BI dashboard file:
+Open:
 
 ```text
 dashboard/bluestock_mf_dashboard.pbix
 ```
 
 using Microsoft Power BI Desktop.
+
+---
+
+# Final Deliverables
+
+- ETL Pipeline
+- SQLite Database
+- SQL Schema & Queries
+- EDA Notebook
+- Performance Analytics Notebook
+- Advanced Analytics Notebook
+- Monte Carlo Simulation Notebook
+- Efficient Frontier Notebook
+- Power BI Dashboard
+- Recommendation Engine
+- Automated NAV Scheduler
+- Final Report (PDF)
+- Presentation (PPTX)
+- GitHub Repository
+- Folder-level README Files
+- run_pipeline.py
 
 ---
 
@@ -349,5 +416,3 @@ Data Analyst Intern
 Bluestock Fintech
 
 June 2026
-
-#
